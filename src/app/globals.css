@@ -1,0 +1,168 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root,
+#__next {
+  height: 100%;
+}
+
+.react-calendar-heatmap .color-empty {
+  fill: #eae0e0;
+} */
+
+/* temperature color */
+.react-calendar-heatmap .color-low {
+  fill: #fffacd;
+}
+
+.react-calendar-heatmap .color-high {
+  fill: #ffa500;
+}
+
+.react-calendar-heatmap .color-medium {
+  fill: #ffa07a;
+}
+
+/* Humidity color */
+.react-calendar-heatmap .color-h-low {
+  fill: #add8e6;
+}
+
+.react-calendar-heatmap .color-h-high {
+  fill: #1e3a8a;
+}
+
+.react-calendar-heatmap .color-h-medium {
+  fill: #5cacee;
+}
+
+.react-calendar-heatmap .color-h-h-text {
+  fill: red;
+}
+
+/* unitconsumption color */
+.react-calendar-heatmap .color-u-low {
+  fill: #fffacd;
+}
+
+.react-calendar-heatmap .color-u-high {
+  fill: #ffa500;
+}
+
+.react-calendar-heatmap .color-u-medium {
+  fill: #ff4500;
+}
+
+.react-calendar-heatmap .color-h-h-text {
+  fill: red;
+}
+
+/* Add this in your CSS file */
+.react-calendar-heatmap-weekday-label {
+  padding-bottom: 10px;
+  display: none;
+}
+
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+
+.react-calendar-heatmap {
+  margin-top: 0 !important;
+  /* Remove any reserved space for labels */
+  padding-top: 0 !important;
+  /* Adjust padding to avoid extra space */
+}
+
+.react-calendar-heatmap svg {
+  width: 100% !important;
+  /* Ensures the calendar fits the container width */
+  height: auto !important;
+  /* Adjusts the height based on content */
+}
+
+/* main */
+.bg-black-70 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.text-whitesmoke {
+  color: whitesmoke !important;
+  /* Ensure the color is applied */
+}
+
+.cover {
+  position: relative;
+}
+
+.cover .content {
+  background: rgba(0, 0, 0, 0.7);
+  /* height: 100%;
+  width: 100%; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.cover .content>h1 {
+  font-family: var(--Patua);
+  /* font-size: 6vmin; */
+  color: whitesmoke;
+}
+
+.cover .content>span {
+  font-family: var(--Rubik);
+  font-size: 2vmin;
+  color: #e5e5e5;
+  display: block;
+  font-weight: bold;
+}
+
+/* svg {
+  width: 100%;
+  height: auto;
+  preserveAspectRatio: xMinYMin meet;
+} */
+
+.card-body {
+  margin-top: 0; 
+  /* padding: 10px; */
+}
