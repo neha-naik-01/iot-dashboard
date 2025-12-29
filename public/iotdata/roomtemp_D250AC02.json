@@ -1,1 +1,14 @@
-[{"_id":"2024-11-03","temperature":22.43},{"_id":"2024-11-04","temperature":22.3},{"_id":"2024-11-05","temperature":22.79},{"_id":"2024-11-06","temperature":21.17},{"_id":"2024-11-07","temperature":21.43},{"_id":"2024-11-08","temperature":22.63},{"_id":"2024-11-09","temperature":22.26},{"_id":"2024-11-10","temperature":22.46},{"_id":"2024-11-11","temperature":21.93},{"_id":"2024-11-14","temperature":19.72},{"_id":"2024-11-15","temperature":20.31}]
+[
+  { "_id": "2025-06-03", "temperature": 18.43 },
+  { "_id": "2025-06-04", "temperature": 17.3 },
+  { "_id": "2025-06-05", "temperature": 16.79 },
+  { "_id": "2025-06-06", "temperature": 18.17 },
+  { "_id": "2025-06-07", "temperature": 17.43 },
+  { "_id": "2025-06-08", "temperature": 16.63 },
+  { "_id": "2025-06-09", "temperature": 18.26 },
+  { "_id": "2025-06-10", "temperature": 17.46 },
+  { "_id": "2025-06-11", "temperature": 16.93 },
+  { "_id": "2025-06-14", "temperature": 19.72 },
+  { "_id": "2025-06-15", "temperature": 20.31 },
+  { "_id": "2025-06-25", "temperature": 30.31 }
+]

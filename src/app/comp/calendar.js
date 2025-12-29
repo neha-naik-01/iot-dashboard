@@ -9,15 +9,23 @@ const Calendarmain = ({ firstDate, lastDate, iotData, getDatesOfMonth }) => {
 
   const heatmapRef = useRef(null);
 
+  // useEffect(() => {
+  //   const svg = heatmapRef.current.querySelector("svg");
+  //   if (svg) {
+  //     // svg.setAttribute("viewBox", "0 10 800 200"); // Adjust the viewBox as needed
+  //     // svg.setAttribute("viewBox", "-25 11 170 65"); // Adjust the viewBox as needed
+  //     svg.setAttribute("viewBox", "-5 12 150 53"); // Adjust the viewBox as needed
+  //     svg.setAttribute("preserveAspectRatio", "xMinYMin meet"); // Optional: control aspect ratio
+  //   }
+  // }, []);
+
   useEffect(() => {
     const svg = heatmapRef.current.querySelector("svg");
     if (svg) {
-      // svg.setAttribute("viewBox", "0 10 800 200"); // Adjust the viewBox as needed
-      // svg.setAttribute("viewBox", "-25 11 170 65"); // Adjust the viewBox as needed
-      svg.setAttribute("viewBox", "-5 12 150 53"); // Adjust the viewBox as needed
-      svg.setAttribute("preserveAspectRatio", "xMinYMin meet"); // Optional: control aspect ratio
+      svg.setAttribute("viewBox", "-5 11 170 65"); // Expand width & height
+      svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
     }
-  }, []);
+  }, []);  
 
   function shiftDate(date, numDays) {
     const newDate = new Date(date);

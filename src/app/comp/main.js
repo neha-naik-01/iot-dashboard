@@ -83,30 +83,31 @@ const Main = ({
   // pause={false}  // Prevents the carousel from pausing on hover
 
   return (
-    <section className="section-1">
+    <section>
       <div className="container text-center">
         <span>{moment(new Date(firstDate)).format("MMMM YYYY")}</span>
       </div>
 
       <Carousel
-        interval={3000}
+        interval={30000}
         wrap={true}
         controls={true}
-        indicators={true}
+        indicators={false}
         pause={false}
         onSlide={(newIndex) => setActiveIndex(newIndex)}
+        slide={true}
+        fade={false}
       >
         {iotDevices.map((device, index) => (
           <Carousel.Item key={index}>
             <div className="container text-center">
               <p>{device}</p>
             </div>
-            {/* row - index */}
-            <div className="team row">
+            {/* <div className="team row">
               <div className="col-md-6 col-12 mb-4">
                 <div className="card">
                   <div className="card-body">
-                    <span className="card-title">Unit Consumption</span>
+                    <span className="card-title">Unit Consumption (kWh)</span>
                     <UnitConsumptionCalendar
                       firstDate={firstDate}
                       lastDate={lastDate}
@@ -119,11 +120,10 @@ const Main = ({
               <div className="col-md-6 col-12 mb-4">
                 <div className="card">
                   <div className="card-body">
-                    <span className="card-title">Temperature</span>
+                    <span className="card-title">Temperature (&deg;C)</span>
                     <Calendar
                       firstDate={firstDate}
                       lastDate={lastDate}
-                      // iotData={iotData[device]}
                       iotData={iotData}
                       getDatesOfMonth={getDatesOfMonth}
                     />
@@ -133,12 +133,72 @@ const Main = ({
               <div className="col-md-6 col-12 mb-4">
                 <div className="card">
                   <div className="card-body">
-                    <span className="card-title">Humidity</span>
+                    <span className="card-title">Humidity (%)</span>
                     <HumidCalendar
                       firstDate={firstDate}
                       lastDate={lastDate}
-                      // humidIotData={humidIotData[device]}
                       humidIotData={humidIotData}
+                      getDatesOfMonth={getDatesOfMonth}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div> */}
+
+            {/* Grid Layout for Calendars (2x2) */}
+            <div className="row justify-content-center ml-10 mr-10">
+              {/* Top Row: Unit Consumption & Temperature */}
+              <div className="col-lg-6 col-md-6 col-12 mb-3">
+                <div className="card">
+                  <div className="card-body">
+                    <span className="card-title">Unit Consumption (kWh)</span>
+                    <UnitConsumptionCalendar
+                      firstDate={firstDate}
+                      lastDate={lastDate}
+                      unitConsumIotData={unitConsumptionIotData}
+                      getDatesOfMonth={getDatesOfMonth}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-12 mb-3">
+                <div className="card">
+                  <div className="card-body">
+                    <span className="card-title">Temperature (&deg;C)</span>
+                    <Calendar
+                      firstDate={firstDate}
+                      lastDate={lastDate}
+                      iotData={iotData}
+                      getDatesOfMonth={getDatesOfMonth}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Row: Humidity & Another Calendar */}
+              <div className="col-lg-6 col-md-6 col-12 mb-3">
+                <div className="card">
+                  <div className="card-body">
+                    <span className="card-title">Humidity (%)</span>
+                    <HumidCalendar
+                      firstDate={firstDate}
+                      lastDate={lastDate}
+                      humidIotData={humidIotData}
+                      getDatesOfMonth={getDatesOfMonth}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-12 mb-3">
+                <div className="card">
+                  <div className="card-body">
+                    <span className="card-title">Another Calendar</span>
+                    <Calendar
+                      firstDate={firstDate}
+                      lastDate={lastDate}
+                      iotData={iotData}
                       getDatesOfMonth={getDatesOfMonth}
                     />
                   </div>

@@ -1,1 +1,16 @@
-[{"_id":"2024-11-03","unitConsumption":0.02},{"_id":"2024-11-04","unitConsumption":0.02},{"_id":"2024-11-05","unitConsumption":0.04},{"_id":"2024-11-06","unitConsumption":0.04},{"_id":"2024-11-07","unitConsumption":0.2},{"_id":"2024-11-08","unitConsumption":0.66},{"_id":"2024-11-09","unitConsumption":0.5},{"_id":"2024-11-10","unitConsumption":0.62},{"_id":"2024-11-11","unitConsumption":0.43},{"_id":"2024-11-14","unitConsumption":0.41},{"_id":"2024-11-15","unitConsumption":0.6}]
+[
+    { "_id": "2025-06-02", "unitConsumption": 0 },
+    { "_id": "2025-06-12", "unitConsumption": 0 },
+    { "_id": "2025-06-13", "unitConsumption": 0 },
+    { "_id": "2025-06-14", "unitConsumption": 0 },
+    { "_id": "2025-06-15", "unitConsumption": 0 },
+    { "_id": "2025-06-16", "unitConsumption": 0 },
+    { "_id": "2025-06-17", "unitConsumption": 0 },
+    { "_id": "2025-06-18", "unitConsumption": 0 },
+    { "_id": "2025-06-19", "unitConsumption": 0 },
+    { "_id": "2025-06-20", "unitConsumption": 0 },
+    { "_id": "2025-06-21", "unitConsumption": 0 },
+    { "_id": "2025-06-22", "unitConsumption": 0 },
+    { "_id": "2025-06-23", "unitConsumption": 0 }
+  ]
+  
