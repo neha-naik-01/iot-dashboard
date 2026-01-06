@@ -8,6 +8,7 @@ import moment from "moment";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { poppins } from "../styles/fonts"; // Adjust path based on location
+import { getAcData } from "@/lib/getAcData";
 
 const Main = ({
   pageiotdata,
@@ -30,22 +31,24 @@ const Main = ({
   useEffect(() => {
     const updateIotData = async () => {
       try {
-        const response = await axios.post("dashboard/api/data/postdata", {
-          selectedAc: iotDevices[activeIndex],
-        });
+        // const response = await axios.post("dashboard/api/data/postdata", {
+        //   selectedAc: iotDevices[activeIndex],
+        // });
+
+        const response = await getAcData(iotDevices[activeIndex]);
         
-        if (response.data) {
-          setunitConsumptionIotData(response.data.unitConsumptionData.map((item, index) => ({
+        if (response) {
+          setunitConsumptionIotData(response.unitConsumptionData.map((item, index) => ({
             date: item._id,
             unitConsumption: item.unitConsumption,
           })) || []);
 
-          setHumidIotData(response.data.humidityData.map((item, index) => ({
+          setHumidIotData(response.humidityData.map((item, index) => ({
             date: item._id,
             humidity: item.humidity,
           })) || []);
 
-          setIotData(response.data.tempData.map((item, index) => ({
+          setIotData(response.tempData.map((item, index) => ({
             date: item._id,
             temp: item.temperature,
           })) || []);
